@@ -1,17 +1,17 @@
-#include<iostream>
-using namespace std;
+// #include<iostream>
+// using namespace std;
 
-int GCD(int a, int b){
-    int res = min(a, b);
-    while(res > 0){
-        if (a%res == 0 && b%res == 0)
-        {
-            break;
-        }
-        res--;  
-    }
-    return res;
-}
+// int GCD(int a, int b){
+//     int res = min(a, b);
+//     while(res > 0){
+//         if (a%res == 0 && b%res == 0)
+//         {
+//             break;
+//         }
+//         res--;  
+//     }
+//     return res;
+// }
 
 // C++ program to find GCD of two numbers
 // #include <iostream>
@@ -29,3 +29,25 @@ int GCD(int a, int b){
 //     cout << GCD(a,b) << endl;   
 //     return 0;
 // }
+
+#include<iostream>
+using namespace std;
+
+int GCD(int a ,int b){
+    if (b == 0)
+    {
+        return a;
+    }
+    else
+    {
+        return GCD( b , a % b);
+    }
+}
+
+int main(){
+    int a , b;
+    cout << "Enter two numbers: ";
+    cin >> a >> b;
+    cout << GCD(a,b) << endl;   
+    return 0;
+}
