@@ -41,6 +41,11 @@ void printDivisors(int n){
             cout << i << " ";
         }
     }
+    
+    if (i - (n / i) == 1) {
+		i--;
+	}
+    
     for (; i >=1; i--)
     {
         if (n % i == 0)
